@@ -7,11 +7,10 @@
 <title>CARD STRATEGY | カードビジネス専門コンサルティングファーム</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#080910;--surface:#0d0e14;--card:#12131b;--border:rgba(255,255,255,0.07);--accent:#e8c84a;--accent2:#4a7fe8;--text:#e4e4ee;--muted:#666680;--white:#ffffff;--font-d:'Bebas Neue',sans-serif;--font-b:'Noto Sans JP',sans-serif;--font-m:'DM Mono',monospace;}
+:root{--bg:#080910;--surface:#0d0e14;--card:#12131b;--border:rgba(255,255,255,0.07);--accent:#e8c84a;--accent2:#4a7fe8;--accentr:#e84a6a;--text:#e4e4ee;--muted:#666680;--white:#ffffff;--font-d:'Bebas Neue',sans-serif;--font-b:'Noto Sans JP',sans-serif;--font-m:'DM Mono',monospace;}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:var(--font-b);font-size:15px;line-height:1.8;overflow-x:hidden;}
-body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0;}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background:rgba(8,9,16,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(–border);}
 .nav-logo{font-family:var(–font-d);font-size:21px;letter-spacing:4px;color:var(–white);text-decoration:none;}
@@ -54,6 +53,7 @@ section{padding:112px 48px;position:relative;}
 .s-title{font-family:var(–font-d);font-size:clamp(44px,6vw,76px);line-height:.95;letter-spacing:1px;color:var(–white);margin-bottom:14px;}
 .s-sub{font-size:14px;color:var(–muted);max-width:500px;line-height:1.95;}
 
+/* SERVICES */
 .svc-wrap{max-width:1120px;margin:0 auto;}
 .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(–border);border:1px solid var(–border);margin-top:60px;}
 .svc{background:var(–card);padding:40px 30px;position:relative;overflow:hidden;transition:background .25s;}
@@ -69,13 +69,15 @@ section{padding:112px 48px;position:relative;}
 .tag{font-family:var(–font-m);font-size:8px;letter-spacing:1px;padding:3px 8px;border:1px solid var(–border);color:var(–muted);text-transform:uppercase;}
 .tag-y{border-color:rgba(232,200,74,0.3);color:var(–accent);background:rgba(232,200,74,0.05);}
 .tag-b{border-color:rgba(74,127,232,0.3);color:var(–accent2);background:rgba(74,127,232,0.05);}
+.tag-r{border-color:rgba(232,74,106,0.3);color:var(–accentr);background:rgba(232,74,106,0.05);}
 .svc-global{background:rgba(232,200,74,0.02);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px dashed rgba(232,200,74,0.12);}
 
+/* ABOUT */
 .about{background:var(–surface);border-top:1px solid var(–border);border-bottom:1px solid var(–border);}
 .about-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
 .pillars{display:flex;flex-direction:column;gap:20px;margin-top:32px;}
 .pillar{display:flex;gap:16px;align-items:flex-start;}
-.p-ico{width:38px;height:38px;border:1px solid var(–accent);display:flex;align-items:center;justify-content:center;font-family:var(–font-m);font-size:10px;color:var(–accent);flex-shrink:0;}
+.p-ico{width:38px;height:38px;border:1px solid var(–accent);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
 .p-txt h4{font-size:13px;font-weight:700;color:var(–white);margin-bottom:4px;}
 .p-txt p{font-size:12px;color:var(–muted);line-height:1.8;}
 .status-board{background:var(–card);border:1px solid var(–border);padding:36px;}
@@ -87,6 +89,24 @@ section{padding:112px 48px;position:relative;}
 .badge-live{border:1px solid rgba(74,232,120,0.4);color:#4ae878;background:rgba(74,232,120,0.06);}
 .badge-soon{border:1px solid var(–border);color:var(–muted);}
 
+/* PERSONA */
+.persona-wrap{max-width:1120px;margin:0 auto;}
+.persona-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:60px;}
+.pcard{background:var(–card);border:1px solid var(–border);padding:36px;position:relative;overflow:hidden;}
+.pcard::after{content:’’;position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(–accent),var(–accent2));}
+.p-type{font-family:var(–font-m);font-size:9px;letter-spacing:2px;color:var(–accent);text-transform:uppercase;margin-bottom:10px;}
+.p-ico2{font-size:32px;margin-bottom:16px;display:block;}
+.p-name{font-size:17px;font-weight:700;color:var(–white);margin-bottom:14px;line-height:1.4;}
+.p-pain{font-size:12px;color:var(–muted);line-height:1.9;margin-bottom:12px;}
+.p-learn{background:rgba(74,127,232,0.06);border:1px solid rgba(74,127,232,0.2);padding:12px 14px;font-size:11px;color:var(–accent2);line-height:1.75;margin-bottom:12px;}
+.p-sol{background:rgba(232,200,74,0.05);border:1px solid rgba(232,200,74,0.15);padding:12px 14px;font-size:11px;color:var(–accent);line-height:1.75;}
+.p-svc{margin-top:16px;display:flex;flex-wrap:wrap;gap:5px;}
+
+.legal-alert{background:rgba(232,74,106,0.04);border:1px solid rgba(232,74,106,0.2);padding:24px 28px;margin-top:32px;border-left:3px solid var(–accentr);}
+.legal-alert-title{font-size:14px;font-weight:700;color:var(–accentr);margin-bottom:8px;}
+.legal-alert-desc{font-size:12px;color:var(–muted);line-height:1.9;}
+
+/* WHY */
 .why-inner{max-width:1120px;margin:0 auto;}
 .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:60px;}
 .why-card{background:var(–card);border:1px solid var(–border);padding:36px;position:relative;}
@@ -95,16 +115,18 @@ section{padding:112px 48px;position:relative;}
 .why-h{font-size:15px;font-weight:700;color:var(–white);margin-bottom:10px;}
 .why-p{font-size:12px;color:var(–muted);line-height:1.9;}
 
-.persona-wrap{max-width:1120px;margin:0 auto;}
-.persona-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:60px;}
-.pcard{background:var(–card);border:1px solid var(–border);padding:36px;position:relative;overflow:hidden;}
-.pcard::after{content:’’;position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(–accent),var(–accent2));}
-.p-type{font-family:var(–font-m);font-size:9px;letter-spacing:2px;color:var(–accent);text-transform:uppercase;margin-bottom:10px;}
-.p-ico2{font-size:32px;margin-bottom:16px;display:block;}
-.p-name{font-size:17px;font-weight:700;color:var(–white);margin-bottom:14px;line-height:1.4;}
-.p-pain{font-size:12px;color:var(–muted);line-height:1.9;margin-bottom:16px;}
-.p-sol{background:rgba(232,200,74,0.05);border:1px solid rgba(232,200,74,0.15);padding:12px 14px;font-size:11px;color:var(–accent);line-height:1.75;}
+/* FAQ */
+.faq-inner{max-width:800px;margin:0 auto;}
+.faq-list{margin-top:60px;display:flex;flex-direction:column;gap:12px;}
+.faq-item{background:var(–card);border:1px solid var(–border);}
+.faq-q{padding:20px 24px;font-size:14px;font-weight:700;color:var(–white);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+.faq-q::after{content:’+’;font-family:var(–font-m);font-size:20px;color:var(–accent);flex-shrink:0;transition:transform .2s;}
+.faq-item.open .faq-q::after{transform:rotate(45deg);}
+.faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;}
+.faq-item.open .faq-a{max-height:300px;padding:0 24px 20px;}
+.faq-a p{font-size:13px;color:var(–muted);line-height:1.9;}
 
+/* FLOW */
 .flow{background:var(–surface);border-top:1px solid var(–border);border-bottom:1px solid var(–border);}
 .flow-inner{max-width:860px;margin:0 auto;}
 .steps{display:flex;flex-direction:column;margin-top:60px;position:relative;}
@@ -115,13 +137,13 @@ section{padding:112px 48px;position:relative;}
 .step-c h4{font-size:15px;font-weight:700;color:var(–white);margin-bottom:6px;}
 .step-c p{font-size:12px;color:var(–muted);line-height:1.9;}
 
+/* CTA */
 .cta{text-align:center;position:relative;overflow:hidden;}
 .cta-bg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(232,200,74,0.04) 0%,transparent 50%,rgba(74,127,232,0.04) 100%);}
 .cta-in{position:relative;z-index:1;max-width:680px;margin:0 auto;}
 .cta-title{font-family:var(–font-d);font-size:clamp(44px,6vw,76px);color:var(–white);line-height:1;margin-bottom:20px;}
-.cta-sub{font-size:14px;color:var(–muted);line-height:1.95;margin-bottom:44px;}
-.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.cta-note{margin-top:28px;font-family:var(–font-m);font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.14);}
+.cta-sub{font-size:14px;color:var(–muted);line-height:1.95;margin-bottom:32px;}
+.cta-note{margin-top:24px;font-family:var(–font-m);font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.14);}
 
 footer{padding:44px 48px;border-top:1px solid var(–border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;}
 .f-logo{font-family:var(–font-d);font-size:20px;letter-spacing:3px;color:var(–white);}
@@ -156,23 +178,25 @@ footer{padding:28px 20px;flex-direction:column;align-items:flex-start;}
     <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#target">For Who</a></li>
-    <li><a href="#flow">Flow</a></li>
+    <li><a href="#faq">FAQ</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">無料相談</a>
+  <a href="https://form.run/@contact-7JxoJi2AS5SvvC2BNTpI" target="_blank" class="nav-cta">無料相談</a>
 </nav>
+
+<!-- HERO -->
 
 <section class="hero" id="top">
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Japan's First TCG Business Consulting Firm</div>
+    <div class="hero-eyebrow">🎴 Japan's First TCG Business Consulting Firm</div>
     <h1>CARD<br><span class="acc">STRAT</span><span class="ghost">EGY</span></h1>
-    <p class="hero-desc">オンラインオリパ市場に特化した、日本初のビジネスコンサルティングファーム。ITコンサル・システム開発・データ分析・クリエイティブ制作・ロジスティクス・経営戦略まで、カードビジネスの勝ち筋をトータルで設計する。</p>
-    <p class="hero-en">Strategy for the Card Business. Powered by Data & Behavioral Science.</p>
+    <p class="hero-desc">オンラインオリパ市場に特化した、日本初のビジネスコンサルティングファーム。行動経済学×データ分析×法的リスク管理で、カードビジネスの成長を科学的に設計する。</p>
+    <p class="hero-en">Strategy for the Card Business. Powered by Behavioral Science & Data.</p>
     <div class="hero-btns">
-      <a href="#services" class="btn-p">サービスを見る →</a>
-      <a href="#contact" class="btn-g">無料相談はこちら</a>
+      <a href="https://form.run/@contact-7JxoJi2AS5SvvC2BNTpI" target="_blank" class="btn-p">💬 まずは無料相談</a>
+      <a href="#services" class="btn-g">📋 サービスを見る</a>
     </div>
     <div class="hero-kpis">
       <div><div class="kpi-n">7</div><div class="kpi-l">Service Lines</div></div>
@@ -182,19 +206,37 @@ footer{padding:28px 20px;flex-direction:column;align-items:flex-start;}
   </div>
 </section>
 
+<!-- TICKER -->
+
 <div class="ticker">
   <div class="ticker-inner">
-    <span class="ticker-item">IT Consulting —</span><span class="ticker-item">System Development —</span><span class="ticker-item">Business Consulting —</span><span class="ticker-item">Creative Production —</span><span class="ticker-item">Logistics Support —</span><span class="ticker-item">Shop Management —</span><span class="ticker-item">HR & Organization —</span><span class="ticker-item">Global Expansion —</span>
-    <span class="ticker-item">IT Consulting —</span><span class="ticker-item">System Development —</span><span class="ticker-item">Business Consulting —</span><span class="ticker-item">Creative Production —</span><span class="ticker-item">Logistics Support —</span><span class="ticker-item">Shop Management —</span><span class="ticker-item">HR & Organization —</span><span class="ticker-item">Global Expansion —</span>
+    <span class="ticker-item">🎴 IT Consulting —</span>
+    <span class="ticker-item">⚙️ System Development —</span>
+    <span class="ticker-item">📊 Behavioral Science —</span>
+    <span class="ticker-item">🎨 Creative Production —</span>
+    <span class="ticker-item">📦 Logistics Support —</span>
+    <span class="ticker-item">⚖️ Legal Risk Support —</span>
+    <span class="ticker-item">👥 HR & Organization —</span>
+    <span class="ticker-item">🌏 Global Expansion —</span>
+    <span class="ticker-item">🎴 IT Consulting —</span>
+    <span class="ticker-item">⚙️ System Development —</span>
+    <span class="ticker-item">📊 Behavioral Science —</span>
+    <span class="ticker-item">🎨 Creative Production —</span>
+    <span class="ticker-item">📦 Logistics Support —</span>
+    <span class="ticker-item">⚖️ Legal Risk Support —</span>
+    <span class="ticker-item">👥 HR & Organization —</span>
+    <span class="ticker-item">🌏 Global Expansion —</span>
   </div>
 </div>
+
+<!-- SERVICES -->
 
 <section id="services">
   <div class="svc-wrap">
     <div class="reveal">
       <div class="s-tag">Services</div>
       <h2 class="s-title">7つの<br>サービスライン</h2>
-      <p class="s-sub">カードビジネスに必要なすべてを、専門チームが一気通貫で提供する。</p>
+      <p class="s-sub">カードビジネスに必要なすべてを、専門チームが一気通貫で提供する。まずはお気軽にご相談ください。</p>
     </div>
     <div class="svc-grid reveal">
       <div class="svc">
@@ -208,8 +250,8 @@ footer{padding:28px 20px;flex-direction:column;align-items:flex-start;}
         <div class="svc-n">02</div><span class="svc-ico">⚙️</span>
         <div class="svc-title">システム開発</div>
         <div class="svc-en">System Development</div>
-        <p class="svc-desc">オンラインオリパサイトをゼロから構築。SaaS月額プランからフルカスタム開発まで対応。抽選ロジック・Stripe決済・管理画面を含む完全なシステムを提供。</p>
-        <div class="svc-tags"><span class="tag tag-y">SaaS月額</span><span class="tag tag-y">フルカスタム</span><span class="tag">抽選ロジック</span><span class="tag">決済連携</span></div>
+        <p class="svc-desc">オンラインオリパサイトをゼロから構築。SaaS型の月額プランからフルカスタム開発まで対応。抽選ロジック・決済・管理画面を含む完全なシステムを提供。</p>
+        <div class="svc-tags"><span class="tag tag-y">SaaS</span><span class="tag tag-y">フルカスタム</span><span class="tag">抽選ロジック</span><span class="tag">決済連携</span></div>
       </div>
       <div class="svc">
         <div class="svc-n">03</div><span class="svc-ico">📊</span>
@@ -219,129 +261,249 @@ footer{padding:28px 20px;flex-direction:column;align-items:flex-start;}
         <div class="svc-tags"><span class="tag tag-y">行動経済学</span><span class="tag tag-y">データ分析</span><span class="tag">確率設計</span><span class="tag">LTV改善</span></div>
       </div>
       <div class="svc">
-        <div class="svc-n">04</div><span class="svc-ico">🎨</span>
+        <div class="svc-n">04</div><span class="svc-ico">⚖️</span>
+        <div class="svc-title">法的リスク・コンプライアンス</div>
+        <div class="svc-en">Legal Risk Support</div>
+        <p class="svc-desc">景品表示法・賭博法・資金決済法など、オリパ運営に関わる法的グレーゾーンを整理。安全に運営するためのリスク管理体制の構築を支援する。</p>
+        <div class="svc-tags"><span class="tag tag-r">景品表示法</span><span class="tag tag-r">リスク管理</span><span class="tag">規約整備</span></div>
+      </div>
+      <div class="svc">
+        <div class="svc-n">05</div><span class="svc-ico">🎨</span>
         <div class="svc-title">クリエイティブ制作</div>
         <div class="svc-en">Creative Production</div>
         <p class="svc-desc">オリパのサムネイル・バナー・SNS素材・ガチャ演出動画・ブランドロゴまで制作。視覚的な訴求力がコンバージョンに直結するクリエイティブを一貫して提供。</p>
         <div class="svc-tags"><span class="tag tag-y">サムネイル</span><span class="tag tag-y">演出動画</span><span class="tag">バナー</span><span class="tag">ブランディング</span></div>
       </div>
       <div class="svc">
-        <div class="svc-n">05</div><span class="svc-ico">📦</span>
+        <div class="svc-n">06</div><span class="svc-ico">📦</span>
         <div class="svc-title">ロジスティクス支援</div>
         <div class="svc-en">Logistics Support</div>
-        <p class="svc-desc">発送代行・梱包設計・配送業者選定・在庫管理フロー構築をトータルサポート。オンラインオリパ運営の最大の課題である物流オペレーションを最適化する。</p>
+        <p class="svc-desc">発送代行・梱包設計・配送業者選定・在庫管理フロー構築をトータルサポート。オリパ運営の最大の課題である物流オペレーションを最適化する。</p>
         <div class="svc-tags"><span class="tag tag-y">発送代行</span><span class="tag tag-y">梱包設計</span><span class="tag">在庫管理</span><span class="tag">配送最適化</span></div>
       </div>
       <div class="svc">
-        <div class="svc-n">06</div><span class="svc-ico">🃏</span>
-        <div class="svc-title">カードショップ経営コンサル</div>
-        <div class="svc-en">Shop Management</div>
-        <p class="svc-desc">実店舗・オンラインショップの売上改善・在庫戦略・マーケティング支援。オリパ運営との連動による収益最大化モデルを設計。買取・販売・イベント戦略まで対応。</p>
-        <div class="svc-tags"><span class="tag tag-b">売上改善</span><span class="tag tag-b">在庫戦略</span><span class="tag">マーケ</span><span class="tag">イベント設計</span></div>
-      </div>
-      <div class="svc">
         <div class="svc-n">07</div><span class="svc-ico">👥</span>
-        <div class="svc-title">HR・組織コンサルティング</div>
-        <div class="svc-en">HR & Organization</div>
-        <p class="svc-desc">カードショップ・TCG事業者向けの採用設計・育成体系・組織設計。事業拡大フェーズの人材戦略から評価制度設計まで、組織の成長を支援する。</p>
-        <div class="svc-tags"><span class="tag tag-b">採用設計</span><span class="tag tag-b">育成体系</span><span class="tag">評価制度</span><span class="tag">組織設計</span></div>
+        <div class="svc-title">カードショップ経営・HR</div>
+        <div class="svc-en">Shop & HR Consulting</div>
+        <p class="svc-desc">実店舗の売上改善・在庫戦略・マーケティング支援から、採用設計・育成体系・組織設計まで。カードビジネス事業者の経営を包括的に支援する。</p>
+        <div class="svc-tags"><span class="tag tag-b">売上改善</span><span class="tag tag-b">在庫戦略</span><span class="tag">採用設計</span><span class="tag">組織設計</span></div>
       </div>
       <div class="svc svc-global">
         <div style="font-family:var(--font-m);font-size:9px;letter-spacing:3px;color:var(--accent);margin-bottom:14px;">COMING SOON</div>
-        <div style="font-family:var(--font-d);font-size:52px;color:rgba(232,200,74,0.12);margin-bottom:14px;line-height:1;">GLOBAL</div>
+        <div style="font-size:32px;margin-bottom:10px;">🌏</div>
+        <div style="font-family:var(--font-d);font-size:40px;color:rgba(232,200,74,0.12);margin-bottom:14px;line-height:1;">GLOBAL</div>
         <p style="font-size:12px;color:var(--muted);line-height:1.9;">韓国・東南アジア・北米への<br>越境展開支援を準備中。</p>
       </div>
     </div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="https://form.run/@contact-7JxoJi2AS5SvvC2BNTpI" target="_blank" class="btn-p">💬 サービスについて相談する</a>
+    </div>
   </div>
 </section>
+
+<!-- ABOUT -->
 
 <section class="about" id="about">
   <div class="about-inner">
     <div class="reveal">
       <div class="s-tag">About</div>
       <h2 class="s-title">なぜ今、<br>カードビジネス<br>専門なのか。</h2>
-      <p class="s-sub" style="margin-top:20px;">オンラインオリパ市場は急拡大しているにもかかわらず、システム・戦略・クリエイティブ・物流を一気通貫で提供できる専門家が存在しない。CARD STRATEGYは行動経済学・組織コンサル・ITアーキテクチャの知見を融合し、カードビジネス事業者の成長を設計する。</p>
+      <p class="s-sub" style="margin-top:20px;">オンラインオリパ市場は急拡大しているにもかかわらず、システム・戦略・法律・物流を一気通貫で提供できる専門家が存在しない。CARD STRATEGYは行動経済学・組織コンサル・ITアーキテクチャの知見を融合し、カードビジネス事業者の成長を科学的に設計する。</p>
       <div class="pillars">
-        <div class="pillar"><div class="p-ico">BE</div><div class="p-txt"><h4>行動経済学の応用</h4><p>損失回避・アンカリング・可変報酬設計でユーザーの購買行動を科学的に最適化。感覚ではなくエビデンスベースで売上を設計する。</p></div></div>
-        <div class="pillar"><div class="p-ico">DA</div><div class="p-txt"><h4>データドリブン改善</h4><p>顧客購買データ・確率設計・コホート分析でLTV・リピート率を定量的に改善。数字で見える化し、施策を最適化する。</p></div></div>
-        <div class="pillar"><div class="p-ico">IT</div><div class="p-txt"><h4>ITコンサル×開発一体</h4><p>要件定義から開発・運用まで同一チームが担当。引き継ぎロスなくスピードと品質を両立する。</p></div></div>
+        <div class="pillar">
+          <div class="p-ico">📊</div>
+          <div class="p-txt"><h4>行動経済学の応用</h4><p>損失回避・アンカリング・可変報酬設計でユーザーの購買行動を科学的に最適化。感覚ではなくエビデンスベースで売上を設計する。</p></div>
+        </div>
+        <div class="pillar">
+          <div class="p-ico">📈</div>
+          <div class="p-txt"><h4>データドリブン改善</h4><p>顧客購買データ・確率設計・コホート分析でLTV・リピート率を定量的に改善。数字で見える化し、施策を最適化する。</p></div>
+        </div>
+        <div class="pillar">
+          <div class="p-ico">⚖️</div>
+          <div class="p-txt"><h4>法的リスク管理</h4><p>景品表示法・賭博法のグレーゾーンを整理し、安全に運営できる体制を構築。法的不安を解消した上でビジネスを加速させる。</p></div>
+        </div>
       </div>
     </div>
     <div class="reveal">
       <div class="status-board">
         <div class="sb-head">SERVICE STATUS</div>
-        <div class="sb-row on"><span class="sb-name">ITコンサルティング</span><span class="badge badge-live">LIVE</span></div>
-        <div class="sb-row on"><span class="sb-name">システム開発</span><span class="badge badge-live">LIVE</span></div>
-        <div class="sb-row on"><span class="sb-name">ビジネスコンサルティング</span><span class="badge badge-live">LIVE</span></div>
-        <div class="sb-row on"><span class="sb-name">クリエイティブ制作</span><span class="badge badge-live">LIVE</span></div>
-        <div class="sb-row on"><span class="sb-name">ロジスティクス支援</span><span class="badge badge-live">LIVE</span></div>
-        <div class="sb-row on"><span class="sb-name">カードショップ経営コンサル</span><span class="badge badge-live">LIVE</span></div>
-        <div class="sb-row on"><span class="sb-name">HR・組織コンサルティング</span><span class="badge badge-live">LIVE</span></div>
-        <div class="sb-row"><span class="sb-name">海外展開支援</span><span class="badge badge-soon">COMING SOON</span></div>
+        <div class="sb-row on"><span class="sb-name">🖥️ ITコンサルティング</span><span class="badge badge-live">LIVE</span></div>
+        <div class="sb-row on"><span class="sb-name">⚙️ システム開発</span><span class="badge badge-live">LIVE</span></div>
+        <div class="sb-row on"><span class="sb-name">📊 ビジネスコンサルティング</span><span class="badge badge-live">LIVE</span></div>
+        <div class="sb-row on"><span class="sb-name">⚖️ 法的リスク支援</span><span class="badge badge-live">LIVE</span></div>
+        <div class="sb-row on"><span class="sb-name">🎨 クリエイティブ制作</span><span class="badge badge-live">LIVE</span></div>
+        <div class="sb-row on"><span class="sb-name">📦 ロジスティクス支援</span><span class="badge badge-live">LIVE</span></div>
+        <div class="sb-row on"><span class="sb-name">👥 カードショップ経営・HR</span><span class="badge badge-live">LIVE</span></div>
+        <div class="sb-row"><span class="sb-name">🌏 海外展開支援</span><span class="badge badge-soon">COMING SOON</span></div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- PERSONA -->
+
+<section id="target" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="persona-wrap">
+    <div class="reveal">
+      <div class="s-tag">For Who</div>
+      <h2 class="s-title">こんな方に</h2>
+      <p class="s-sub">3つのフェーズに合わせたサービス設計。どの段階でもまずはご相談ください。</p>
+    </div>
+    <div class="persona-grid reveal">
+
+```
+  <div class="pcard">
+    <span class="p-ico2">🧑‍💻</span>
+    <div class="p-type">Phase A — スタートアップ</div>
+    <div class="p-name">個人・小規模ショップで<br>オリパを始めたい</div>
+    <p class="p-pain">TCGが好きでオリパビジネスに興味がある。でも「どのシステムを使えばいいか」「法的に問題ないか」「発送はどうするか」が全部わからない。</p>
+    <div class="p-learn">💡 特に知りたいこと：法的にOKな運営方法、低コストで始められるシステム選定、売れるオリパの作り方。</div>
+    <div class="p-sol">→ ITコンサル＋法的リスク支援＋SaaS導入で、安全・低コストでスタート。</div>
+    <div class="p-svc">
+      <span class="tag tag-y">ITコンサル</span>
+      <span class="tag tag-r">法的リスク</span>
+      <span class="tag tag-y">システム開発</span>
+    </div>
+  </div>
+
+  <div class="pcard">
+    <span class="p-ico2">🏪</span>
+    <div class="p-type">Phase B — 既存ショップのDX</div>
+    <div class="p-name">カードショップを経営中。<br>オンラインに拡張したい</div>
+    <p class="p-pain">店舗での売上は安定しているが、競合がオンラインオリパで伸びているのを見て焦っている。システム化・オンライン展開のノウハウがなく、どこに相談すればいいかわからない。</p>
+    <div class="p-learn">💡 特に知りたいこと：既存顧客をオンラインに移行する方法、店舗在庫のオリパ活用術、オンライン運営の法的注意点。</div>
+    <div class="p-sol">→ ITコンサル＋システム開発＋経営コンサルのセットで、店舗×オンラインを統合設計。</div>
+    <div class="p-svc">
+      <span class="tag tag-y">ITコンサル</span>
+      <span class="tag tag-y">システム開発</span>
+      <span class="tag tag-b">経営コンサル</span>
+    </div>
+  </div>
+
+  <div class="pcard">
+    <span class="p-ico2">📈</span>
+    <div class="p-type">Phase C — スケールアップ</div>
+    <div class="p-name">オンラインオリパ運営中。<br>売上をさらに伸ばしたい</div>
+    <p class="p-pain">既にオンラインオリパを運営しているが、売上が頭打ちになってきた。リピーターが増えない、発送オペレーションが追いつかない、もっと科学的に設計したい。</p>
+    <div class="p-learn">💡 特に知りたいこと：行動経済学を使ったリピート率向上、データに基づく確率・価格設計、発送オペレーションの効率化。</div>
+    <div class="p-sol">→ ビジネスコンサル＋データ分析＋ロジスティクス支援で売上と運営効率を同時改善。</div>
+    <div class="p-svc">
+      <span class="tag tag-y">ビジネスコンサル</span>
+      <span class="tag tag-y">データ分析</span>
+      <span class="tag tag-y">ロジ支援</span>
+    </div>
+  </div>
+
+</div>
+<div class="legal-alert reveal">
+  <div class="legal-alert-title">⚖️ オリパの法的グレーゾーンについて</div>
+  <div class="legal-alert-desc">オンラインオリパは景品表示法・賭博法・資金決済法が複雑に絡み合う領域です。「還元率の表示方法」「ハズレの扱い」「コイン制の設計」など、運営方法によっては法的リスクが発生します。CARD STRATEGYでは、安全に運営するためのリスク管理体制の構築をサポートします。まずはお気軽にご相談ください。</div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- WHY -->
 
 <section id="why">
   <div class="why-inner">
     <div class="reveal"><div class="s-tag">Why Us</div><h2 class="s-title">競合が<br>できない理由</h2></div>
     <div class="why-grid reveal">
-      <div class="why-card"><div class="why-bg">01</div><div class="why-h">オリパ専門ファームは日本に存在しない</div><p class="why-p">システム開発会社はオリパを作れても売上を上げられない。コンサルはカードビジネスを知らない。7つのサービスを一気通貫で提供できるのはCARS STRATEGYだけ。</p></div>
-      <div class="why-card"><div class="why-bg">02</div><div class="why-h">行動経済学×データ分析で売上を科学する</div><p class="why-p">損失回避・アンカリング・可変報酬設計をシステムと連動させ、感覚ではなくエビデンスに基づいた売上設計を提供。競合には真似できない専門知識の組み合わせ。</p></div>
-      <div class="why-card"><div class="why-bg">03</div><div class="why-h">受託開発より圧倒的にコスパが高い</div><p class="why-p">競合の受託開発は初期300万円〜。CARD STRATEGYのSaaSなら月額9,800円から開始可能。個人・副業レベルからエンタープライズまでスケールに合わせて対応。</p></div>
-      <div class="why-card"><div class="why-bg">04</div><div class="why-h">クリエイティブ×ロジまで完結する窓口</div><p class="why-p">サムネイル・演出動画・発送代行まで、オリパ運営に必要なすべてをワンストップで依頼可能。複数業者への分散発注による手間とコストのロスを解消する。</p></div>
+      <div class="why-card">
+        <div class="why-bg">01</div>
+        <div class="why-h">🎴 オリパ専門ファームは日本に存在しない</div>
+        <p class="why-p">システム開発会社はオリパを作れても売上を上げられない。コンサルはカードビジネスを知らない。7つのサービスを一気通貫で提供できるのはCARS STRATEGYだけ。</p>
+      </div>
+      <div class="why-card">
+        <div class="why-bg">02</div>
+        <div class="why-h">📊 行動経済学×データで売上を科学する</div>
+        <p class="why-p">損失回避・アンカリング・可変報酬設計をシステムと連動させ、感覚ではなくエビデンスに基づいた売上設計を提供。競合には真似できない専門知識の組み合わせ。</p>
+      </div>
+      <div class="why-card">
+        <div class="why-bg">03</div>
+        <div class="why-h">⚖️ 法的リスクまで踏み込んで支援する</div>
+        <p class="why-p">オリパの法的グレーゾーンを理解した上でシステム・コンサルを提供。景品表示法・賭博法への対応まで含めた安心のサポート体制を構築する。</p>
+      </div>
+      <div class="why-card">
+        <div class="why-bg">04</div>
+        <div class="why-h">🔁 スタートから成長まで一気通貫で伴走</div>
+        <p class="why-p">開業支援からシステム開発・売上改善・ロジ最適化まで、同一チームが長期で伴走。フェーズが変わるたびに業者を変える手間とリスクを排除する。</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="target" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="persona-wrap">
-    <div class="reveal"><div class="s-tag">For Who</div><h2 class="s-title">こんな方に</h2><p class="s-sub">3つのペルソナに特化したサービス設計。状況に合ったプランを提案する。</p></div>
-    <div class="persona-grid reveal">
-      <div class="pcard">
-        <span class="p-ico2">🧑‍💻</span><div class="p-type">Persona A — 個人・副業</div>
-        <div class="p-name">副業でオンライン<br>オリパを始めたい</div>
-        <p class="p-pain">技術もない、資金も限られている。受託開発に300万円は出せない。スプレッドシート管理は限界で、発送も自分でやるのが大変。</p>
-        <div class="p-sol">→ 月額9,800円〜のSaaS＋コンサルで即日スタート。ロジ・クリエイティブも丸投げ可能。</div>
+<!-- FAQ -->
+
+<section style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);" id="faq">
+  <div class="faq-inner">
+    <div class="reveal"><div class="s-tag">FAQ</div><h2 class="s-title">よくある<br>質問</h2></div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-q">⚖️ オンラインオリパって違法じゃないんですか？</div>
+        <div class="faq-a"><p>適切な設計のもとで運営すれば違法ではありません。ただし景品表示法・賭博法・資金決済法が複雑に絡み合う領域であり、確率表示の方法やコイン制の設計によっては法的リスクが生じます。CARD STRATEGYでは法的リスクの整理と安全な運営設計をサポートします。</p></div>
       </div>
-      <div class="pcard">
-        <span class="p-ico2">🏪</span><div class="p-type">Persona B — カードショップ</div>
-        <div class="p-name">店舗からオンライン<br>展開にシフトしたい</div>
-        <p class="p-pain">実店舗はあるがオンライン展開が遅れている。既存POSとの連携が難しく、何から手をつければいいかわからない。</p>
-        <div class="p-sol">→ ITコンサル＋開発＋経営コンサルのセットで、店舗×オンラインの収益最大化を設計。</div>
+      <div class="faq-item">
+        <div class="faq-q">🛠️ ITの知識がなくてもシステムを導入できますか？</div>
+        <div class="faq-a"><p>はい、問題ありません。ITコンサルティングサービスにて、要件定義から導入・設定まで伴走支援します。技術的な知識は不要です。まずはどんなオリパサービスを作りたいかをお聞かせください。</p></div>
       </div>
-      <div class="pcard">
-        <span class="p-ico2">📱</span><div class="p-type">Persona C — インフルエンサー</div>
-        <div class="p-name">自分のブランドで<br>オリパサイトを持ちたい</div>
-        <p class="p-pain">フォロワーはいる。でも自分のオリパサイトの作り方がわからない。既存サービスではなく自社ブランドで差別化したい。</p>
-        <div class="p-sol">→ フルカスタム開発＋クリエイティブ制作で、唯一無二のブランドサイトを構築。</div>
+      <div class="faq-item">
+        <div class="faq-q">📊 行動経済学を活用するとどんな効果がありますか？</div>
+        <div class="faq-a"><p>「残り〇口」表示による希少性演出、高額オリパを先に見せるアンカリング効果、ランダムな当たり出現による継続購買設計など、購買心理を科学的に活用することでリピート率・客単価の向上が見込めます。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">📦 発送業務も対応してもらえますか？</div>
+        <div class="faq-a"><p>はい、ロジスティクス支援サービスにて発送代行・梱包設計・配送業者の選定まで対応しています。オリパ運営で最も手間がかかる物流部分を丸ごとお任せいただけます。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">🏪 既にカードショップを経営していますが相談できますか？</div>
+        <div class="faq-a"><p>もちろんです。既存店舗からオンラインオリパへの展開、在庫の有効活用、既存顧客のオンライン誘導など、店舗×オンラインの連動設計を専門に支援しています。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">💬 まず何から相談すればいいかわかりません</div>
+        <div class="faq-a"><p>それで大丈夫です。無料相談（30分）では、現状の課題をヒアリングした上で最適なサービスをご提案します。「まだ何も決まっていない」という段階からでもお気軽にご連絡ください。</p></div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- FLOW -->
 
 <section class="flow" id="flow">
   <div class="flow-inner">
     <div class="reveal"><div class="s-tag">Flow</div><h2 class="s-title">ご支援の流れ</h2></div>
     <div class="steps reveal">
-      <div class="step"><div class="step-n">01</div><div class="step-c"><h4>無料相談（30分）</h4><p>現状のヒアリングと課題整理。オンライン対応・秘密保持対応可。どのサービスラインが最適かを確認し、最短ルートを提案する。</p></div></div>
-      <div class="step"><div class="step-n">02</div><div class="step-c"><h4>提案・見積もり</h4><p>ヒアリング内容をもとに最適なプランを提案。SaaS月額・フルカスタム・コンサル単体など複数パターンを比較提示する。</p></div></div>
-      <div class="step"><div class="step-n">03</div><div class="step-c"><h4>契約・キックオフ</h4><p>NDA締結後にプロジェクト開始。SaaSプランは最短即日稼働。開発・コンサルプランはキックオフミーティングからスタート。</p></div></div>
-      <div class="step"><div class="step-n">04</div><div class="step-c"><h4>運用・継続改善</h4><p>リリース後もデータ分析・売上改善提案を継続実施。顧問契約で月次KPIレビュー・施策立案まで長期サポートに対応。</p></div></div>
+      <div class="step">
+        <div class="step-n">01</div>
+        <div class="step-c"><h4>💬 無料相談（30分）</h4><p>現状のヒアリングと課題整理。法的な不安・システムの悩み・売上改善まで何でもご相談ください。オンライン対応・秘密保持対応可。</p></div>
+      </div>
+      <div class="step">
+        <div class="step-n">02</div>
+        <div class="step-c"><h4>📋 提案・お見積もり</h4><p>ヒアリング内容をもとに最適なサービスをご提案。複数のプランを比較提示し、ご予算・ご状況に合った進め方を一緒に決めます。</p></div>
+      </div>
+      <div class="step">
+        <div class="step-n">03</div>
+        <div class="step-c"><h4>🤝 契約・キックオフ</h4><p>NDA締結後にプロジェクト開始。システム導入は最短即日稼働。コンサル・開発プランはキックオフミーティングからスタート。</p></div>
+      </div>
+      <div class="step">
+        <div class="step-n">04</div>
+        <div class="step-c"><h4>📈 運用・継続改善</h4><p>リリース後もデータ分析・売上改善提案を継続実施。顧問契約で月次KPIレビュー・施策立案まで長期サポートに対応。</p></div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- CTA -->
 
 <section class="cta" id="contact">
   <div class="cta-bg"></div>
   <div class="cta-in reveal">
     <div class="s-tag" style="justify-content:center;"><span style="display:block;width:36px;height:1px;background:var(--accent);"></span>Contact<span style="display:block;width:36px;height:1px;background:var(--accent);"></span></div>
     <div class="cta-title">まず、<br>話しましょう。</div>
-    <p class="cta-sub">オンラインオリパを始めたい。既存システムを改善したい。売上を上げたい。クリエイティブを頼みたい。発送を任せたい。どんな段階でも、無料相談からお気軽にどうぞ。</p>
-    <div class="cta-btns">
-      <a href="mailto:contact@cardstrategy.jp" class="btn-p">無料相談を予約する →</a>
-      <a href="#services" class="btn-g">サービス詳細を見る</a>
+    <p class="cta-sub">⚖️ 法的に大丈夫か不安。💻 システムをどう選べばいいかわからない。📈 売上をもっと上げたい。📦 発送を任せたい。どんな段階でも、無料相談からお気軽にどうぞ。</p>
+    <div style="margin-top:32px;text-align:left;max-width:560px;margin-left:auto;margin-right:auto;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:32px;border-radius:2px;">
+      <iframe src="https://form.run/embed/@contact-7JxoJi2AS5SvvC2BNTpI?embed=direct" width="100%" height="600" frameborder="0" style="border:none;width:100%;"></iframe>
     </div>
     <p class="cta-note">RESPONSE WITHIN 24H — NDA AVAILABLE — ONLINE MEETING OK</p>
   </div>
@@ -353,6 +515,7 @@ footer{padding:28px 20px;flex-direction:column;align-items:flex-start;}
     <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#target">For Who</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="f-copy">© 2026 CARD STRATEGY. All rights reserved.</div>
@@ -363,6 +526,14 @@ const obs=new IntersectionObserver((entries)=>{
   entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*70);});
 },{threshold:0.08});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement;
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!isOpen)item.classList.add('open');
+  });
+});
 </script>
 
 </body>
