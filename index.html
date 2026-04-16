@@ -174,7 +174,15 @@ footer{padding:28px 20px;flex-direction:column;align-items:flex-start;}
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">CARD<em>_</em>STRATEGY</a>
+  <a href="#" class="nav-logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+    <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="1" y="1" width="18" height="24" rx="2" stroke="#e8c84a" stroke-width="1.2"/>
+      <rect x="5" y="5" width="18" height="24" rx="2" stroke="rgba(232,200,74,0.25)" stroke-width="0.8"/>
+      <line x1="5" y1="20" x2="15" y2="5" stroke="#e8c84a" stroke-width="1.2"/>
+      <circle cx="15" cy="20" r="2" fill="#e8c84a"/>
+    </svg>
+    <span style="font-family:var(--font-d);font-size:18px;letter-spacing:4px;color:#ffffff !important;-webkit-text-fill-color:#ffffff !important;">CARD<em style="color:var(--accent);-webkit-text-fill-color:var(--accent);font-style:normal;">_</em>STRATEGY</span>
+  </a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
@@ -229,6 +237,25 @@ footer{padding:28px 20px;flex-direction:column;align-items:flex-start;}
     <span class="ticker-item">🌏 Global Expansion —</span>
   </div>
 </div>
+
+<!-- PHILOSOPHY -->
+
+<section style="min-height:70vh;display:flex;align-items:center;padding:140px 48px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(232,200,74,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(232,200,74,0.02) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 60% 60% at 80% 50%,black 0%,transparent 100%);pointer-events:none;"></div>
+  <div style="max-width:900px;position:relative;z-index:1;">
+    <div style="font-family:var(--font-m);font-size:10px;letter-spacing:4px;color:var(--accent);text-transform:uppercase;margin-bottom:48px;display:flex;align-items:center;gap:16px;" class="reveal">
+      Philosophy
+      <span style="display:block;width:40px;height:1px;background:var(--accent);"></span>
+    </div>
+    <div style="font-family:var(--font-d);font-size:clamp(36px,5.5vw,72px);line-height:1.05;letter-spacing:.5px;" class="reveal">
+      <span style="color:rgba(240,239,232,0.35);">カードビジネスに、</span><br>
+      <span style="color:var(--accent);">科学を持ち込む。</span><br>
+      <span style="color:rgba(240,239,232,0.35);">感覚ではなく、</span><br>
+      <span style="color:var(--white);">データと行動経済学で</span><br>
+      <span style="color:rgba(240,239,232,0.35);">勝ちパターンを設計する。</span>
+    </div>
+  </div>
+</section>
 
 <!-- SERVICES -->
 
@@ -512,7 +539,15 @@ footer{padding:28px 20px;flex-direction:column;align-items:flex-start;}
 </section>
 
 <footer>
-  <div class="f-logo">CARD<em>_</em>STRATEGY</div>
+  <div class="f-logo" style="display:flex;align-items:center;gap:10px;">
+    <svg width="20" height="20" viewBox="0 0 28 28" fill="none">
+      <rect x="1" y="1" width="18" height="24" rx="2" stroke="#e8c84a" stroke-width="1.2"/>
+      <rect x="5" y="5" width="18" height="24" rx="2" stroke="rgba(232,200,74,0.25)" stroke-width="0.8"/>
+      <line x1="5" y1="20" x2="15" y2="5" stroke="#e8c84a" stroke-width="1.2"/>
+      <circle cx="15" cy="20" r="2" fill="#e8c84a"/>
+    </svg>
+    <span style="font-family:var(--font-d);font-size:18px;letter-spacing:3px;color:#ffffff;">CARD<em style="color:var(--accent);font-style:normal;">_</em>STRATEGY</span>
+  </div>
   <ul class="f-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
